@@ -24,6 +24,7 @@ c---  arXiv:0906.0008 [hep-ph].
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       double complex V5L,V6l,A0phiAQggmppm,lnrat
       double complex l13,l34,l12,l24,Lsm1DS,Lsm1,Lsm1_2me
       double precision s3,mhsq,s123,s234,s341,s412
@@ -45,10 +46,10 @@ c--- to the one that is implemented in lfunctions.f
 
 c--- This is the same function as in the mpmm amplitude
       V5L=
-     & -epinv**2-epinv*l12-0.5d0*l12**2
-     & -epinv**2-epinv*l34-0.5d0*l34**2
-     & +epinv**2+epinv*l13+0.5d0*l13**2
-     & +epinv**2+epinv*l24+0.5d0*l24**2
+     & -epinv2-epinv*l12-0.5d0*l12**2
+     & -epinv2-epinv*l34-0.5d0*l34**2
+     & +epinv2+epinv*l13+0.5d0*l13**2
+     & +epinv2+epinv*l24+0.5d0*l24**2
 
 c--- These are additional boxes
       V6L=

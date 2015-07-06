@@ -67,6 +67,7 @@ c---
       include 'constants.f'
       include 'sprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       include 'scheme.f'
       integer i1,i2,i3
@@ -89,7 +90,7 @@ c---
 	stop
       endif
       
-CId,anscdr=cf*((-2*epinv**2-epinv*(3-2*[ln(-s12)])-7-[ln(-s12)]**2)*T0
+CId,anscdr=cf*((-2*epinv2-epinv*(3-2*[ln(-s12)])-7-[ln(-s12)]**2)*T0
 C    +[ln(-s13)]*(s23-2*s12)/s13
 C    +[ln(-s23)]*(s13-2*s12)/s23
 C    +(s12**2+s23**2)/s13/s23*(([ln(-s12)]-[ln(-s23)])**2+pisq)
@@ -97,7 +98,7 @@ c    +(s12**2+s13**2)/s13/s23*(([ln(-s12)]-[ln(-s13)])**2+pisq)
 C    -4*[ln(-s12)]);
 
 
-      qagamgam=cf*((-2d0*epinv**2-epinv*(3d0-2d0*dble(l12))
+      qagamgam=cf*((-2d0*epinv2-epinv*(3d0-2d0*dble(l12))
      . -7d0+deltar-dble(l12**2))*T0
      . +dble(l13)*(s23-2d0*s12)/s13
      . +dble(l23)*(s13-2d0*s12)/s23

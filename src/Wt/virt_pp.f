@@ -14,6 +14,7 @@ c     f(-p1)+f(-p2)--> W^-(e^-(p3)+nbar(p4))+ Q(p5)
 c----
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'b0.f'
       include 'scheme.f'
       include 'scale.f'
@@ -32,7 +33,7 @@ c----
       msq=mQ**2
       xlog=log(musq/msq)
       epin=epinv+xlog
-      epin2=epinv**2+epinv*xlog+half*xlog**2
+      epin2=epinv2+epinv*xlog+half*xlog**2
       taugs=+2d0*dot(p,is,ig)
       taucs=+2d0*dot(p,ic,is)
       taucg=+2d0*dot(p,ic,ig)

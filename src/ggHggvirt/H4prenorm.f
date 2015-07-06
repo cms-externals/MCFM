@@ -11,6 +11,7 @@ c--- (unrenormalized) results in the EGZ paper
       include 'constants.f'
       include 'b0.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scheme.f'
       logical CheckEGZ
       common/CheckEGZ/CheckEGZ

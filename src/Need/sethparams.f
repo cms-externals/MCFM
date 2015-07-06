@@ -13,6 +13,9 @@ c---   br,wwbr,zzbr,tautaubr : the LO calculated values
      & br_sp,tautaubr_sp,gamgambr_sp,wwbr_sp,zzbr_sp,zgambr_sp
       logical spira
       common/spira/spira
+c---SHERPA: short-cut, we don't care about MCFM's BRs
+      return
+c---SHERPA: end short-cut
 
 ***************************** COMPUTE PARTIAL WIDTHS ***************************
 *                                                                              *

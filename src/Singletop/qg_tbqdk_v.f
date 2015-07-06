@@ -123,6 +123,7 @@ c---  momenta to be permuted according to i1,i2,i5
       include 'constants.f'
       include 'b0.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       include 'zprods_com.f'
       include 'stopscales.f'
@@ -292,21 +293,21 @@ c      lRs1=lnrat(ml*sqrt(xsqR),-2*dot(p,1,4))
 c--- pole check
 c
 c      write(6,*) 'Appp/LOamp(2,2,2)=',Appp/(+LOamps(2,2,2)
-c     . *(-2d0*epinv**2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
+c     . *(-2d0*epinv2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
 c      write(6,*) 'Appm/LOamp(2,2,1)=',Appm/(+LOamps(2,2,1)
-c     . *(-2d0*epinv**2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
+c     . *(-2d0*epinv2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
 c      write(6,*) 'Apmp/LOamp(2,1,2)=',Apmp/(+LOamps(2,1,2)
-c     . *(-2d0*epinv**2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
+c     . *(-2d0*epinv2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
 c      write(6,*) 'Apmm/LOamp(2,1,1)=',Apmm/(+LOamps(2,1,1)
-c     . *(-2d0*epinv**2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
+c     . *(-2d0*epinv2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
 c      write(6,*) 'Ampp/LOamp(1,2,2)=',Ampp/(+LOamps(1,2,2)
-c     . *(-2d0*epinv**2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
+c     . *(-2d0*epinv2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
 c      write(6,*) 'Ampm/LOamp(1,2,1)=',Ampm/(+LOamps(1,2,1)
-c     . *(-2d0*epinv**2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
+c     . *(-2d0*epinv2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
 c      write(6,*) 'Ammp/LOamp(1,1,2)=',Ammp/(+LOamps(1,1,2)
-c     . *(-2d0*epinv**2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
+c     . *(-2d0*epinv2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
 c      write(6,*) 'Ammm/LOamp(1,1,1)=',Ammm/(+LOamps(1,1,1)
-c     . *(-2d0*epinv**2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
+c     . *(-2d0*epinv2 - epinv*(-1d0 + 2d0*lRc1 + 2d0*lRs1)))
 
 c      write(6,*) 'Bppp/LOamp(2,2,2)=',Bppp/(+LOamps(2,2,2)
 c     .    *epinv*(-4d0*dot(p,3,4)*lp*xs + mh*ml*(-1d0 + xs**2))/

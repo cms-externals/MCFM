@@ -134,6 +134,7 @@ c===============================c
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       double precision xsq,mu,ms,mc,s,t,qsq,ms2,mc2,A,B,lam
       double complex lnrat,logq
 
@@ -156,7 +157,7 @@ c===============================c
       endif
 
       bx1= - (
-     &         -dcmplx(epinv**2)
+     &         -dcmplx(epinv2)
      &         +epinv*lnrat(mc2-t,mc2)
      &         +epinv*lnrat(ms2-s,ms2)
      &         -epinv*lnrat(xsq,mc*ms)
@@ -195,6 +196,7 @@ c===============================c
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
 
       double precision xsq,s,t,qsq,ms2,mc2,ddilog
       double precision ss,tt,ms,mc,mu,xs,x3
@@ -270,6 +272,7 @@ c===============================c
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       double precision xsq,t,mc2,ddilog,mc,mu
       double complex lnrat,dd1
 
@@ -284,7 +287,7 @@ c===============================c
       dd1=dd1+dcmplx(ddilog(1d0-mc2/(mc2-t)))
 
       tr1= (
-     &       -dcmplx(epinv**2)
+     &       -dcmplx(epinv2)
      &       -2d0*epinv*lnrat(mc*mu,mc2-t)
      &       +lnrat(mc2,mc2-t)**2
      &       -2d0*lnrat(mu*mc,mc2-t)**2
@@ -316,6 +319,7 @@ c===============================c
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
 
       double precision xsq,s,ms2,mc2,ddilog
       double precision ms,mc,xs
@@ -380,7 +384,7 @@ c      mu=dsqrt(xsq)
       dd1=dd1+dcmplx(ddilog(1d0-mc2/(mc2-t)))
 
       tr1f= (
-c     &       -epinv**2
+c     &       -epinv2
 c     &       -2d0*epinv*lnrat(mc*mu,mc2-t)
 c     &       -2d0*lnrat(mu*mc,mc2-t)**2
      &       +lnrat(mc2,mc2-t)**2
@@ -537,6 +541,7 @@ c
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       double precision xsq,mc2,ms2,s,mc,ms
       double complex lam2,lam,lll,prod
 

@@ -11,6 +11,7 @@ c---   i.e. complete LHS
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'deltar.f'
       integer j1,j2,j3,j4
       double complex zab2,V3L,lnrat,L0,L1,Lsm1,Lsm1DS,Lsm1_2me,
@@ -31,8 +32,8 @@ c--- to the one that is implemented in lfunctions.f
       l41=lnrat(musq,-s(j4,j1))
       
       V3L=
-     . -epinv**2-epinv*l34-0.5d0*l34**2
-     . -epinv**2-epinv*l41-0.5d0*l41**2
+     . -epinv2-epinv*l34-0.5d0*l34**2
+     . -epinv2-epinv*l41-0.5d0*l41**2
      . -3d0/2d0*(epinv+l341)-7d0/2d0-deltar/2d0
      . -Lsm1_2me(s412,s123,s(j1,j2),mhsq)
      . -Lsm1_2me(s123,s234,s(j2,j3),mhsq)

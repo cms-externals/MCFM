@@ -11,8 +11,8 @@
       include 'scheme.f'
 
       include 'scale.f'
-      include 'epinv2.f'
       include 'epinv.f'
+      include 'epinv2.f'
 
       double precision p(mxpart,4),msqv(-nf:nf,-nf:nf)
       double complex a60h(4,16),a6vh(4,16)

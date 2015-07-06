@@ -14,7 +14,7 @@ C      qswap(al,4)=q(al,j4)
 C      qswap(al,5)=-q(al,j1)-q(al,j2)-q(al,j3)-q(al,j4)
 C      enddo
 C      call GZHqarbvsq(qswap,sqres,first_time,new_event) 
-C      Hqarbvsqnum=epinv**2*sqres(-2)+epinv*sqres(-1)+sqres(0)
+C      Hqarbvsqnum=epinv2*sqres(-2)+epinv*sqres(-1)+sqres(0)
 C      if (first_time) first_time = .false. 
 C      if (new_event) new_event = .false. 
 C      return

@@ -1451,11 +1451,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-        stop
+c        stop
 	endif
 	if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
                  
@@ -1519,11 +1519,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->ZZ BR, not defined below threshold'
-        stop
+c        stop
 	endif
 	if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
 
@@ -1747,11 +1747,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
                  
@@ -1802,11 +1802,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->ZZ BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
                  
@@ -1890,11 +1890,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -1937,11 +1937,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -1993,11 +1993,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -2023,11 +2023,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->ZZ BR, not defined below threshold'
-        stop
+c        stop
 	endif
           if (zerowidth) then
           write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-          stop
+c          stop
           endif
         endif
         
@@ -2185,12 +2185,12 @@ c-----------------------------------------------------------------------
           write(6,*) 'This process number is not suitable for the'
           write(6,*) 'NLO calculation. Please run processes'
           write(6,*) '131 (virtual+real) and 132 (real) separately.'
-          stop
+c          stop
         endif
         if ( (nproc .eq. 133) .and. (part .ne. 'real') ) then
           write(6,*) 'This process number is not suitable for such a'
           write(6,*) 'calculation. Please run process 133 (real) only.'
-          stop
+c          stop
         endif
              
         if     (nproc .eq. 131) then
@@ -2448,7 +2448,7 @@ c--  159 '  f(p1)+f(p2) --> c c~ (for total Xsect)'
      . .or.(part .eq. 'real')) then
           write(6,*) 'This process number is available only at LO'
           write(6,*) 'Please set part = lord and rerun'
-             stop
+c             stop
       endif
 c--  160 '  f(p1)+f(p2) --> t t~ +jet (for total Xsect)'
         case='tt_glu'
@@ -2521,7 +2521,7 @@ c--  162 '  f(p1)+f(p2) --> t(-->nu(p3)+e^+(p4)+b(p5))+q(p6) [decay]'
           write(6,*) 'This process number can not be used for a'
           write(6,*) 'LO calculation. Please run either process'
           write(6,*) '161 (lord) or process 162 (virt+real).'
-          stop
+c          stop
         endif
         
 c--- ndim is one less than usual, since the top is always on-shell 
@@ -2605,7 +2605,7 @@ c--  167 '  f(p1)+f(p2) --> t~(-->e^-(p3)+nu~(p4)+b~(p5))+q(p6) [decay]'
           write(6,*) 'This process number can not be used for a'
           write(6,*) 'LO calculation. Please run either process'
           write(6,*) '166 (lord) or process 167 (virt+real).'
-          stop
+c          stop
         endif
         
 c--- ndim is one less than usual, since the top is always on-shell 
@@ -2678,7 +2678,7 @@ c--  172 '  f(p1)+f(p2) --> t(-->nu(p3)+e^+(p4)+b(p5))+b~(p6)) [decay]'
           write(6,*) 'This process number can not be used for a'
           write(6,*) 'LO calculation. Please run either process'
           write(6,*) '171 (lord) or process 172 (virt+real).'
-          stop
+c          stop
         endif
         
 c--- ndim is one less than usual, since the top is always on-shell 
@@ -2743,7 +2743,7 @@ c--  177 '  f(p1)+f(p2) --> t~(-->e^-(p3)+nu~(p4)+b~(p5))+b(p6)) [decay]'
           write(6,*) 'This process number can not be used for a'
           write(6,*) 'LO calculation. Please run either process'
           write(6,*) '176 (lord) or process 177 (virt+real).'
-          stop
+c          stop
         endif
         
 c--- ndim is one less than usual, since the top is always on-shell 
@@ -2840,7 +2840,7 @@ c--  182 '  f(p1)+f(p2) --> W^-(-->e^-(p3)+nu~(p4))+t(nu(p5)+e^+(p6)+b(p7)) [dec
           write(6,*) 'This process number can not be used for a'
           write(6,*) 'LO calculation. Please run either process'
           write(6,*) '181 (lord) or process 182 (virt+real).'
-          stop
+c          stop
         endif
         
         ndim=13
@@ -2993,7 +2993,7 @@ c--  182 '  f(p1)+f(p2) --> W^+(-->nu(p3)+e^+(p4))+t~(e^-(p5)+nu~(p6)+bbar(p7)) 
           write(6,*) 'This process number can not be used for a'
           write(6,*) 'LO calculation. Please run either process'
           write(6,*) '186 (lord) or process 187 (virt+real).'
-          stop
+c          stop
         endif
         
         ndim=13
@@ -3199,11 +3199,11 @@ c--- print warning if we're below threshold
 	  if (removebr) then
 	  write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-          stop
+c          stop
 	  endif
           if (zerowidth) then
           write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-          stop
+c          stop
           endif
           endif
         
@@ -3247,7 +3247,7 @@ c--- print warning if we're below threshold
           write(6,*) 'of integration points'
           if (zerowidth) then
           write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-          stop
+c          stop
           endif
         endif
         
@@ -3356,11 +3356,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -3407,11 +3407,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->ZZ BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -3837,7 +3837,7 @@ c   67   format(i2)
           ndim=10
 	else
 	  write(6,*) 'Unexpected value of nproc in chooser.f!'
-	  stop
+c	  stop
 	endif
         mass2=mt
         mass3=mb
@@ -4202,11 +4202,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -4259,11 +4259,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->ZZ BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -4363,11 +4363,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->WW BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -4420,11 +4420,11 @@ c--- print warning if we're below threshold
 	if (removebr) then
 	write(6,*)
 	write(6,*) 'Cannot remove H->ZZ BR, not defined below threshold'
-        stop
+c        stop
 	endif
         if (zerowidth) then
         write(6,*) 'zerowidth=.true. and higgs decay below threshold'
-        stop
+c        stop
         endif
         endif
         
@@ -5112,7 +5112,7 @@ c---  consisting of the logarithm convolution
           write(6,*) 'This process number is not suitable for the'
           write(6,*) 'LO calculation. Please run process 361'
           write(6,*) 'for the corresponding Born contribution.'
-          stop
+c          stop
         endif
 
 c-----------------------------------------------------------------------
@@ -5668,11 +5668,11 @@ c--- set flags to true unless we're doing W+2 jet or Z+2 jet
       return
 
  43   write(6,*) 'problems opening process.DAT'
-      stop
+c      stop
 
  44   write(6,*) 'Unimplemented process number, nproc = ',nproc, 
      . ' mcfm halted'
-      stop
+c      stop
  
  98   format(' *             Brn.Rat. removed = ',  f11.7, '       *')
      
@@ -5685,7 +5685,7 @@ c--- set flags to true unless we're doing W+2 jet or Z+2 jet
 
       write(6,*) 'chooser: Unimplemented case'
       write(6,*) 'nproc=',nproc      
-      stop
+c      stop
       
       return 
       end
@@ -5705,14 +5705,14 @@ c--- if generating exactly on-shell, there's nothing to worry about
         write(6,*)
         write(6,*) 'Please set m34min not equal to zero to'
         write(6,*) 'prevent the virtual photon from becoming real.'
-        stop
+c        stop
       endif
 
       if ((i .eq. 2) .and. (bbsqmin .eq. 0d0)) then
         write(6,*)
         write(6,*) 'Please set m56min not equal to zero to'
         write(6,*) 'prevent the virtual photon from becoming real.'
-        stop
+c        stop
       endif
       
       return

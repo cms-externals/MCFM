@@ -10,6 +10,7 @@ c--- u + g  ->  c + s + d  (t-channel single-charm)
       include 'constants.f'
       include 'zprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'stopf1inc.f'
       double precision q(mxpart,4),dot,cDs,gDs,cDg,mc,ms,
      . mc2,ms2,u,xsn,xsd,xs

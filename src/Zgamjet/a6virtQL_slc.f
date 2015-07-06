@@ -27,8 +27,8 @@ c-----divergent part
       include 'constants.f'
       include 'sprods_com.f'
       include 'epinv.f'
-      include 'scale.f'
       include 'epinv2.f'
+      include 'scale.f'
       integer j1,j2,j3,j4,j5,j6
       double complex Lnrat,xl12,xl456
       character*14 st

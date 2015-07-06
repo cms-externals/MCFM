@@ -4,7 +4,7 @@
       include 'vanillafiles.f'
       double precision fx(-5:5),x,xmu,xZ,xA,eks98r,xmu_safe
       double precision u_val,d_val,u_sea,d_sea,s_sea,c_sea,b_sea,gluon
-      double precision Ctq3df,Ctq4Fn,Ctq5Pdf,Ctq6Pdf,Ctq5L,CT10Pdf
+      double precision Ctq3df,Ctq4Fn,Ctq5Pdf,Ctq6Pdf,Ctq5L,MCFMCT10Pdf
       integer mode,Iprtn,ih,ih_call,iZ,iA,Irt
       logical first,nucleon
 c--- extra variables for MSTW08 implementation
@@ -455,26 +455,26 @@ C   10     CTEQ4LQ  Low Q0                  0.114        0.7      cteq4lq.tbl
 
       elseif (pdlabel(1:4) .eq. 'CT10') then
 
-             fx(-5)=CT10Pdf(-5,x,xmu)
-             fx(-4)=CT10Pdf(-4,x,xmu)
-             fx(-3)=CT10Pdf(-3,x,xmu)
+             fx(-5)=MCFMCT10Pdf(-5,x,xmu)
+             fx(-4)=MCFMCT10Pdf(-4,x,xmu)
+             fx(-3)=MCFMCT10Pdf(-3,x,xmu)
  
-             fx(0)=CT10Pdf(0,x,xmu)
+             fx(0)=MCFMCT10Pdf(0,x,xmu)
 
-             fx(+3)=CT10Pdf(+3,x,xmu)
-             fx(+4)=CT10Pdf(+4,x,xmu)
-             fx(+5)=CT10Pdf(+5,x,xmu)
+             fx(+3)=MCFMCT10Pdf(+3,x,xmu)
+             fx(+4)=MCFMCT10Pdf(+4,x,xmu)
+             fx(+5)=MCFMCT10Pdf(+5,x,xmu)
 
              if (ih.eq.1) then      
-               fx(1)=CT10Pdf(+2,x,xmu)
-               fx(2)=CT10Pdf(+1,x,xmu)
-               fx(-1)=CT10Pdf(-2,x,xmu)
-               fx(-2)=CT10Pdf(-1,x,xmu)
+               fx(1)=MCFMCT10Pdf(+2,x,xmu)
+               fx(2)=MCFMCT10Pdf(+1,x,xmu)
+               fx(-1)=MCFMCT10Pdf(-2,x,xmu)
+               fx(-2)=MCFMCT10Pdf(-1,x,xmu)
              elseif(ih.eq.-1) then      
-               fx(1)=CT10Pdf(-2,x,xmu)
-               fx(2)=CT10Pdf(-1,x,xmu)
-               fx(-1)=CT10Pdf(+2,x,xmu)
-               fx(-2)=CT10Pdf(+1,x,xmu)
+               fx(1)=MCFMCT10Pdf(-2,x,xmu)
+               fx(2)=MCFMCT10Pdf(-1,x,xmu)
+               fx(-1)=MCFMCT10Pdf(+2,x,xmu)
+               fx(-2)=MCFMCT10Pdf(+1,x,xmu)
              endif
 
 c--- NEW ATTEMPT

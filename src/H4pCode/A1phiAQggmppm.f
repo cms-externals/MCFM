@@ -8,6 +8,7 @@ c---   i.e. complete LHS
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'deltar.f'
       integer j1,j2,j3,j4
       double complex zab2,V1L,A0phiAQggmppm,Lsm1,L2,L1,L0,lnrat,sum,
@@ -31,9 +32,9 @@ c--- to the one that is implemented in lfunctions.f
       l41=lnrat(musq,-s(j4,j1))
 
       V1L=
-     . -epinv**2-epinv*l23-0.5d0*l23**2
-     . -epinv**2-epinv*l34-0.5d0*l34**2
-     . -epinv**2-epinv*l41-0.5d0*l41**2
+     . -epinv2-epinv*l23-0.5d0*l23**2
+     . -epinv2-epinv*l34-0.5d0*l34**2
+     . -epinv2-epinv*l41-0.5d0*l41**2
      . +13d0/6d0*(epinv+l12)
      . +119d0/18d0-deltar/6d0
      . -Lsm1_2me(s123,s234,s(j2,j3),mhsq) 
@@ -111,6 +112,7 @@ c---   i.e. complete LHS
       include 'sprods_com.f'
       include 'zprods_decl.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       include 'deltar.f'
       integer j1,j2,j3,j4
@@ -129,7 +131,7 @@ c--- to the one that is implemented in lfunctions.f
       s234=s3(j2,j3,j4)
       s341=s3(j3,j4,j1)
 
-      VR=-epinv**2-epinv*l12-0.5d0*l12**2
+      VR=-epinv2-epinv*l12-0.5d0*l12**2
      .   -3d0/2d0*(epinv+l12)-7d0/2d0-deltar/2d0
      .   -Lsm1_2me(s3(j2,j3,j4),s3(j3,j4,j1),s(j3,j4),mhsq)
       
@@ -177,6 +179,7 @@ c---   i.e. complete LHS
       include 'zprods_decl.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       integer j1,j2,j3,j4
       double complex l12,zab2,L2,lnrat,A0phiAQggmppm
       double precision s3

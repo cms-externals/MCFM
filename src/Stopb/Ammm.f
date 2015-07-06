@@ -10,6 +10,7 @@ c--- u + g  ->  c + s + d  (t-channel single-charm)
       include 'constants.f'
       include 'zprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'stopf1inc.f'
       double precision q(mxpart,4),dot,cDs,gDs,cDg,mc,ms,
      . mc2,ms2,qsq,s,t,u,xsn,xsd,xs
@@ -174,7 +175,7 @@ c--- u + g  ->  c + s + d  (t-channel single-charm)
      &   (2*gDs+ms2))+(2*trg*(cDs+mc2)+3*trsgc-5*ms2*trc)*gDs+trsgc*(cDs
      &   +ms2)+ms2*trg*(cDs+mc2))/gDs**2+Ammm
 
-      Ammm = epinv**2*ms*(cDg*(trsgc-2*(trg+trc)*gDs)+mc2*trg*gDs)/(cDg
+      Ammm = epinv2*ms*(cDg*(trsgc-2*(trg+trc)*gDs)+mc2*trg*gDs)/(cDg
      &   *gDs)/2.0d+0+Ammm
 
       Ammm = Ammm-3*ms*tr3c002fs*(trc*cDg*(2*gDs+ms2)+mc2*(trs+trg)*gD

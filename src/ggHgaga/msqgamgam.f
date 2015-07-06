@@ -19,6 +19,10 @@ C---statement functions
       Iw(x)=-ctwo*(dcmplx(6d0*x+1d0)
      & +dcmplx(6d0*x*(2d0*x-1d0))*Ftriangle(x))
 C---end statement functions
+c---SHERPA: short-cut, h->gamgam ratio will be reweighted
+      msqgamgam=1d0
+      return
+c---SHERPA: end short-cut
 
 
       if (first) then

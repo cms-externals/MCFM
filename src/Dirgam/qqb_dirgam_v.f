@@ -88,6 +88,7 @@ C---- %%CITATION = NUPHA,B286,553;%%
       include 'constants.f'
       include 'sprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       include 'scheme.f'
       integer i1,i2,i3
@@ -111,7 +112,7 @@ C---- %%CITATION = NUPHA,B286,553;%%
 	stop
       endif
       
-      qaggam=-(2d0*xn-1d0/xn)*epinv**2*T0
+      qaggam=-(2d0*xn-1d0/xn)*epinv2*T0
      . -epinv*(3d0*cf-2d0*cf*dble(l12)+xn*dble(l12-l13-l23)
      .  +11d0*xn/6d0-nf/3d0)*T0
      . +((xn-cf)*pisq/3d0-7d0*cf+deltar*(cf+xn/6d0)-cf*dble(l12**2)
@@ -142,7 +143,7 @@ c      write(6,*) 'lnss,l12',lnss,l12
 c      write(6,*) 'lntt,l13',lntt,l13
 c      write(6,*) 'lnuu,l23',lnuu,l23
 c      write(6,*) 'T0',T0
-c      check= -(2d0*xn-1d0/xn)*epinv**2*T0
+c      check= -(2d0*xn-1d0/xn)*epinv2*T0
 c     . -epinv*(3d0*cf+11d0/6d0*xn+lnss/xn-xn*(lntt+lnuu)-nf/3d0)*T0
 c     . -7d0/2d0*tt*uu**(-1)*xn + 7d0/2d0*tt*uu**(-1)*xn**(-1)
 c     . -7d0/2d0*tt**(-1)*uu*xn + 7d0/2d0*tt**(-1)*uu*xn**(-1)
@@ -184,7 +185,7 @@ c      write(6,*) 'T0',T0
 
 c      check=
 c     .  -(11d0*xn-2d0*nf)/6d0*epinv*T0
-c     . +(-(2d0*xn-1d0/xn)*epinv**2
+c     . +(-(2d0*xn-1d0/xn)*epinv2
 c     . +epinv*(-lntt/xn+xn*lnss+xn*lnuu-3d0*cf))*T0
 c     . +7d0/2d0*ss*uu**(-1)*xn-7d0/2d0*ss*uu**(-1)*xn**(-1)
 c     . +7d0/2d0*ss**(-1)*uu*xn-7d0/2d0*ss**(-1)*uu*xn**(-1)

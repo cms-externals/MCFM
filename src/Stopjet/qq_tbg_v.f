@@ -136,6 +136,7 @@ c---       to the massless line are set to zero
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'nflav.f'
       include 'scale.f'
       include 'zprods_com.f'

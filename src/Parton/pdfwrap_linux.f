@@ -305,7 +305,7 @@ C   10     CTEQ4LQ  Low Q0                  0.114        0.7      cteq4lq.tbl
 
       elseif (pdlabel .eq. 'CT10.00') then
       amz=0.118d0
-      call SetCT10(100)
+      call SetMCFMCT10(100)
       nlooprun=2
 
 

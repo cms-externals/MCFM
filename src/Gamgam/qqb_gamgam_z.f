@@ -6,6 +6,7 @@
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'qcdcouple.f'
       include 'facscale.f'
       include 'scale.f'

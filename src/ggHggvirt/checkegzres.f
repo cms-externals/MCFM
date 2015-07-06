@@ -2,6 +2,7 @@
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'masses.f'
       include 'scale.f'
       include 'sprods_com.f'

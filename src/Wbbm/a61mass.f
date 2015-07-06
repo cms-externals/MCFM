@@ -11,6 +11,7 @@ c---     0 -> q(k1) + qb(k4) + W(->e(k6)+nubar(k5)) + Q(k3) + Qbar(k2)
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'masses.f'
       include 'momwbbm.f'
       include 'nflav.f'
@@ -332,10 +333,10 @@ c--- Note: no heavy quark contribution included for now
       enddo
 
 c--- add up coefficients with appropriate powers of epinv      
-      a61mm=a61mmep(-2)*epinv**2+a61mmep(-1)*epinv+a61mmep(0)
-      a61mp=a61mpep(-2)*epinv**2+a61mpep(-1)*epinv+a61mpep(0)
-      a61pm=a61pmep(-2)*epinv**2+a61pmep(-1)*epinv+a61pmep(0)
-      a61pp=a61ppep(-2)*epinv**2+a61ppep(-1)*epinv+a61ppep(0)
+      a61mm=a61mmep(-2)*epinv2+a61mmep(-1)*epinv+a61mmep(0)
+      a61mp=a61mpep(-2)*epinv2+a61mpep(-1)*epinv+a61mpep(0)
+      a61pm=a61pmep(-2)*epinv2+a61pmep(-1)*epinv+a61pmep(0)
+      a61pp=a61ppep(-2)*epinv2+a61ppep(-1)*epinv+a61ppep(0)
 
 c--- overall wave function and couping constant renormalization
       ren=

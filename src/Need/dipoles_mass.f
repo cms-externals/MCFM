@@ -81,6 +81,7 @@ c--- divergent for _v (vorz=1) or finite for _z (vorz=2,3 for reg,plus)
       double precision x,L,omx,lx,lomx,Pqgreg,alfax,mbar
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- initial-initial gluon-quark antenna, either
@@ -108,6 +109,7 @@ c--- initial-initial gluon-quark antenna, either
       double precision x,L,omx,lx,lomx,Pgqreg,alfax,mbar
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- initial-initial quark-quark (--> gluon) antenna, either
@@ -201,7 +203,7 @@ c--- divergent for _v (vorz=1) or finite for _z (vorz=2,3 for reg,plus)
      &   -half*dlog(1d0+mbarsq)**2+2d0*dlog(mbarsq)*dlog(1d0+mbarsq)
      &   +2d0*ddilog(-mbarsq)+pisqo6
 c--- correct form for double pole (normally zero)
-        if_mqq=if_mqq-epinv**2+epinv*epinv2     
+        if_mqq=if_mqq-epinv2+epinv*epinv2     
         if (scheme .eq. 'tH-V') then
           return
         elseif (scheme .eq. 'dred') then
@@ -249,7 +251,7 @@ c--- correct form for double pole (normally zero)
      &     -half*dlog(1d0+mbarsq)**2+2d0*dlog(mbarsq)*dlog(1d0+mbarsq)
      &     +2d0*ddilog(-mbarsq)+pisqo6
 c--- correct form for double pole (normally zero)
-        if_mgg=if_mgg-epinv**2+epinv*epinv2     
+        if_mgg=if_mgg-epinv2+epinv*epinv2     
         if (scheme .eq. 'tH-V') then
           return
         elseif (scheme .eq. 'dred') then
@@ -306,6 +308,7 @@ c--- we always choose to use the initial spectator
       double precision x,L,mbar,mbarsq,omx,ddilog
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- final-initial quark-gluon antenna, either
@@ -362,6 +365,7 @@ c--- divergent for _v (vorz=1) or finite for _z (vorz=2,3 for reg,plus)
 
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
 C     mbarsq=mass**2/Qsq
 C     L=log(Qsq/musq)
 c--- returns the integral of the subtraction term for an
@@ -430,6 +434,7 @@ c	endif
 
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 
       if (aff .lt. 1d0) then
@@ -627,6 +632,7 @@ c---       that it can match with ff_mgg
 
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scheme.f'
       include 'nflav.f'
       include 'alfacut.f'
@@ -838,7 +844,6 @@ c      integer vorz
 c      double precision x,L,mbar,Ieik,Icoll
 c      include 'constants.f'
 c      include 'epinv.f'
-c      include 'epinv2.f'
 cc--- returns the integral of the subtraction term for an
 cc--- final-initial gluon-gluon antenna, either
 cc--- divergent for _v (vorz=1) or finite for _z (vorz=2,3 for reg,plus)     

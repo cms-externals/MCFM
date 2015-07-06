@@ -76,7 +76,6 @@ c      double precision mt,mw,rsq,omrsq,wlog,rlog,ddilog,ct,Kfun
 c      include 'constants.f'
 c      include 'qcdcouple.f'
 c      include 'epinv.f'
-c      include 'epinv2.f'
 
 c      rsq=(mw/mt)**2
 c      omrsq=1d0-rsq

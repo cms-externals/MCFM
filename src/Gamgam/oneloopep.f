@@ -4,6 +4,7 @@ c--- Routine written automatically by FORM program writef.frm
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'nflav.f'
       include 'scale.f'
       integer h1,h2,h3,h4
@@ -495,7 +496,7 @@ c      write(6,*) 'Amp 0',Amp(h1,h2,h3,h4,0)
 c      write(6,*) 'Amp 1',Amp(h1,h2,h3,h4,1)
 c      write(6,*) 'Amp 2',Amp(h1,h2,h3,h4,2)
       M1(h1,h2,h3,h4)=
-     &+Igg_gaga2*Amp(h1,h2,h3,h4,0)*epinv**2
+     &+Igg_gaga2*Amp(h1,h2,h3,h4,0)*epinv2
      &+(Igg_gaga2*Amp(h1,h2,h3,h4,1)+Igg_gaga1*Amp(h1,h2,h3,h4,0))*epinv
      &+(Igg_gaga2*Amp(h1,h2,h3,h4,2)+Igg_gaga1*Amp(h1,h2,h3,h4,1)
      & +Igg_gaga0*Amp(h1,h2,h3,h4,0))

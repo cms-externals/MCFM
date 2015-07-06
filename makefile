@@ -1,12 +1,12 @@
 # Makefile routine.
 
 # Replace this with the location of Cernlib on your system (if desired)
-CERNLIB     = 
+CERNLIB     =
 # Replace this with the location of LHAPDF on your system (if desired)
-LHAPDFLIB   = 
+LHAPDFLIB   =
 
-MCFMHOME        = /scratch/ellis/play/MCFMdevel
-SOURCEDIR       = /scratch/ellis/play/MCFMdevel/src
+MCFMHOME        = MCFM
+SOURCEDIR       = ${MCFMHOME}/src
 VPATH		= $(DIRS)
 BIN		= $(MCFMHOME)/Bin
 INCPATH  	= $(SOURCEDIR)/Inc
@@ -28,7 +28,7 @@ PDFROUTINES = NATIVE
 NTUPLES = NO
 
 FC = gfortran
-FFLAGS 	= -fno-automatic -fno-f2c -O0 -g -I$(INCPATH) -Iobj
+FFLAGS 	= -fno-automatic -fPIC -DPIC -O0 -g -I$(INCPATH) -Iobj
 
 F90 = gfortran
 F90FLAGS = -fno-automatic -fno-f2c -O2 -g -I$(INCPATH) -Iobj -Jobj

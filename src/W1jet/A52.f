@@ -5,6 +5,7 @@
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       integer j1,j2,j3,j4,j5
       double complex Vcc,Fcc,Vsc,Fsc,l12,l45,L0,L1,Lsm1,A5lom
       double complex lnrat
@@ -13,7 +14,7 @@
       l45=lnrat(musq,-s(j4,j5))  
 C    -i * A5tree  
       A5lom=za(j2,j4)**2/(za(j2,j3)*za(j3,j1)*za(j4,j5))
-      Vcc=-(epinv**2+epinv*l12+0.5d0*l12**2)
+      Vcc=-(epinv2+epinv*l12+0.5d0*l12**2)
      . -2d0*(epinv+l45)-4d0
 
 C--subleading N

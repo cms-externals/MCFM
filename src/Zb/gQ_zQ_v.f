@@ -17,6 +17,7 @@
       include 'sprods_com.f'
       include 'zprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scheme.f'
       include 'heavyflav.f'
       include 'nflav.f'

@@ -4,6 +4,7 @@
       include 'zprods_decl.f'
       include 'sprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       include 'deltar.f'
 C     arXIv:09060008v1, Eq.4.9
@@ -31,7 +32,7 @@ c--- to the one that is implemented in lfunctions.f
       mhsq=s12+s13+s41+s23+s24+s34
 
 C---arXIv:09060008v1 Eq.(4.9)
-      Vlc = -2d0*epinv**2
+      Vlc = -2d0*epinv2
      &  -epinv*lnrat(musq,-s23)-epinv*lnrat(musq,-s41)
      &  -0.5d0*lnrat(musq,-s23)**2-0.5d0*lnrat(musq,-s41)**2
      & +13d0/6d0*(2d0*epinv+lnrat(musq,-s12)+lnrat(musq,-s34))

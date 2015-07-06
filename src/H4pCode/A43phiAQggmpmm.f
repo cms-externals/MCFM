@@ -22,6 +22,7 @@ c---   arXiv: 0910.4481 [hep-ph]
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       double complex zab2,V5L,
      . A0phiAQggmpmm,A0phiAgQgmmpm,lnrat,sum
       double complex l34,l12,l24,l13,Lsm1,Lsm1_2mht
@@ -41,10 +42,10 @@ c---   arXiv: 0910.4481 [hep-ph]
 
 c--- new representation of poles
       V5L=
-     & -epinv**2-epinv*l12-0.5d0*l12**2
-     & -epinv**2-epinv*l34-0.5d0*l34**2
-     & +epinv**2+epinv*l13+0.5d0*l13**2
-     & +epinv**2+epinv*l24+0.5d0*l24**2
+     & -epinv2-epinv*l12-0.5d0*l12**2
+     & -epinv2-epinv*l34-0.5d0*l34**2
+     & +epinv2+epinv*l13+0.5d0*l13**2
+     & +epinv2+epinv*l24+0.5d0*l24**2
 
       sum=+A0phiAQggmpmm(j1,j2,j3,j4,za,zb)*V5L
 

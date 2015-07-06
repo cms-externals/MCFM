@@ -26,6 +26,7 @@
       IMPLICIT NONE
       INCLUDE 'constants.f'
       INCLUDE 'epinv.f'
+      include 'epinv2.f'
       include 'sprods_com.f'
       INCLUDE 'qcdcouple.f'
       INCLUDE 'scale.f'
@@ -86,23 +87,23 @@ C     coupsq=susycoup**2*ghbb**2  => as in the Born function
 * and have a 1/(16 pi^2)*c_\Gamma understood in front 
 * where c_\Gamma= (4 pi)^eps Gamma(1+eps) Gamma(1-eps)^2/Gamma(1-2eps)
 
-           c0t= dble(epinv**2 - epinv*xlntm + xlntm**2/2d0)
-           c0u= dble(epinv**2 - epinv*xlnum + xlnum**2/2d0)
+           c0t= dble(epinv2 - epinv*xlntm + xlntm**2/2d0)
+           c0u= dble(epinv2 - epinv*xlnum + xlnum**2/2d0)
            c0ms=dble(epinv*xlns + (xlnmh**2 - xlnsm**2)/2d0)
            c0mt=dble(epinv*xlnt + (xlnmh**2 - xlntm**2)/2d0)
            c0mu=dble(epinv*xlnu + (xlnmh**2 - xlnum**2)/2d0)
            d0su=dble(
-     .    2d0*(-dilogs - dilogu + epinv**2 + pisq/6d0 - epinv*xlnmh + 
+     .    2d0*(-dilogs - dilogu + epinv2 + pisq/6d0 - epinv*xlnmh + 
      -    xlnmh**2/2d0 - epinv*xlns - xln1ms*xlns + xlnmh*xlns + 
      -    xlns**2/2d0 - epinv*xlnu - xln1mu*xlnu + xlnmh*xlnu + 
      -    xlns*xlnu + xlnu**2/2d0))
            d0st=dble(
-     .    2d0*(-dilogs - dilogt + epinv**2 + pisq/6d0 - epinv*xlnmh + 
+     .    2d0*(-dilogs - dilogt + epinv2 + pisq/6d0 - epinv*xlnmh + 
      -    xlnmh**2/2d0 - epinv*xlns - xln1ms*xlns + xlnmh*xlns + 
      -    xlns**2/2d0 - epinv*xlnt - xln1mt*xlnt + xlnmh*xlnt + 
      -    xlns*xlnt + xlnt**2/2d0))
            d0tu=dble(
-     .    2d0*(-dilogt - dilogu + epinv**2 + pisq/6d0 - epinv*xlnmh + 
+     .    2d0*(-dilogt - dilogu + epinv2 + pisq/6d0 - epinv*xlnmh + 
      -    xlnmh**2/2d0 - epinv*xlnt - xln1mt*xlnt + xlnmh*xlnt + 
      -    xlnt**2/2d0 - epinv*xlnu - xln1mu*xlnu + xlnmh*xlnu + 
      -    xlnt*xlnu + xlnu**2/2d0))

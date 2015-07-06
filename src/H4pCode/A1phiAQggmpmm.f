@@ -10,6 +10,7 @@ c---   arXiv: 0910.4481 [hep-ph]
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'deltar.f'
       integer j,k1,k2,k3,k4
       double complex V1L,A0phiAQggmpmm,lnrat,zab2,Lsm1,Lsm1_2mht
@@ -37,9 +38,9 @@ c---   arXiv: 0910.4481 [hep-ph]
 
       
       V1L=
-     . -epinv**2-epinv*l23-0.5d0*l23**2
-     . -epinv**2-epinv*l34-0.5d0*l34**2
-     . -epinv**2-epinv*l41-0.5d0*l41**2
+     . -epinv2-epinv*l23-0.5d0*l23**2
+     . -epinv2-epinv*l34-0.5d0*l34**2
+     . -epinv2-epinv*l41-0.5d0*l41**2
      . +13d0/6d0*(epinv+l12)+119d0/18d0-deltar/6d0
 
       A1phiAQggmpmmL=A0phiAQggmpmm(k1,k2,k3,k4,za,zb)*V1L
@@ -274,6 +275,7 @@ c---   arXiv: 0910.4481 [hep-ph]
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'deltar.f'
       integer j,k1,k2,k3,k4
       double complex VR,A0phiAQggmpmm,lnrat,zab2,Lsm1,Lsm1_2mht
@@ -296,7 +298,7 @@ c---   arXiv: 0910.4481 [hep-ph]
 
       l12=lnrat(musq,-s12)
 
-      VR=-epinv**2-epinv*l12-0.5d0*l12**2
+      VR=-epinv2-epinv*l12-0.5d0*l12**2
      .   -3d0/2d0*(epinv+l12)-7d0/2d0-deltar/2d0
       A1phiAQggmpmmR=A0phiAQggmpmm(k1,k2,k3,k4,za,zb)*VR
  
@@ -450,6 +452,7 @@ c---   arXiv: 0910.4481 [hep-ph]
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       integer k1,k2,k3,k4
       double complex A0phiAQggmpmm,lnrat
       double complex l12,zab2,BGRL1,BGRL2hat,BGRL3hat

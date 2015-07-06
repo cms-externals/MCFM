@@ -72,10 +72,10 @@ C
 C   The Table_Files are assumed to be in the working directory.
 C
 C   Before using the PDF, it is necessary to do the initialization by
-C       Call SetCT10(Iset)
+C       Call SetMCFMCT10(Iset)
 C   where Iset is the desired PDF specified in the above table.
 C
-C   The function CT10Pdf (Iparton, X, Q)
+C   The function MCFMCT10Pdf (Iparton, X, Q)
 C   returns the parton distribution inside the proton for parton [Iparton]
 C   at [X] Bjorken_X and scale [Q] (GeV) in PDF set [Iset].
 C   Iparton  is the parton label (5, 4, 3, 2, 1, 0, -1, ......, -5)
@@ -95,7 +95,7 @@ C   hllai@tmue.edu.tw, pumplin@pa.msu.edu or nadolsky@physics.smu.edu.
 C
 C===========================================================================
 
-      Function CT10Pdf (Iparton, X, Q)
+      Function MCFMCT10Pdf (Iparton, X, Q)
       Implicit Double Precision (A-H,O-Z)
       Logical Warn
       Common
@@ -107,13 +107,13 @@ C===========================================================================
       save Warn
 
       If (X .lt. 0d0 .or. X .gt. 1D0) Then
-        Print *, 'X out of range in CT10Pdf: ', X
+        Print *, 'X out of range in MCFMCT10Pdf: ', X
         Ct10Pdf = 0D0
         Return
       Endif
 
       If (Q .lt. Qsml) Then
-        Print *, 'Q out of range in CT10Pdf: ', Q
+        Print *, 'Q out of range in MCFMCT10Pdf: ', Q
         Stop
       Endif
 
@@ -121,14 +121,14 @@ C===========================================================================
         If (Warn) Then
 C        print a warning for calling extra flavor
           Warn = .false.
-          Print *, 'Warning: Iparton out of range in CT10Pdf! '
+          Print *, 'Warning: Iparton out of range in MCFMCT10Pdf! '
           Print *, 'Iparton, MxFlvN0: ', Iparton, NfMx
         Endif
-        CT10Pdf = 0D0
+        MCFMCT10Pdf = 0D0
       else
 
-        CT10Pdf = PartonX10 (Iparton, X, Q)
-        if (CT10Pdf.lt.0D0) CT10Pdf = 0D0
+        MCFMCT10Pdf = PartonX10 (Iparton, X, Q)
+        if (MCFMCT10Pdf.lt.0D0) MCFMCT10Pdf = 0D0
       endif                     !if (abs(Iparton...
 
       Return
@@ -136,7 +136,7 @@ C        print a warning for calling extra flavor
 C                             ********************
       End
 
-      Subroutine SetCT10 (Iset)
+      Subroutine SetMCFMCT10 (Iset)
       Implicit Double Precision (A-H,O-Z)
       Parameter (Isetmax0=2)
       Character Flnm(Isetmax0)*5, nn*3, Tablefile*40
@@ -178,7 +178,7 @@ C                                                               30 - 33
           write(nn,'(I1)') Iset-25-Js*2
           Tablefile=Flnm(Js)//nn(1:1)//'f.pds'
         Else
-          Print *, 'Invalid Iset number in SetCT10 :', Iset
+          Print *, 'Invalid Iset number in SetMCFMCT10 :', Iset
           Stop
         Endif
         IU= NextUn10()
@@ -192,7 +192,7 @@ C                                                               30 - 33
       Return
 
  100  Print *, ' Data file ', Tablefile, ' cannot be opened '
-     >  //'in SetCT10!!'
+     >  //'in SetMCFMCT10!!'
       Stop
 C                             ********************
       End

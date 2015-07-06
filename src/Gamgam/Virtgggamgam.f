@@ -1,6 +1,7 @@
       double precision function virtgamgam(s,t,u)
       implicit none
       include 'epinv.f'
+      include 'epinv2.f'
       include 'constants.f'
       include 'scale.f'
       include 'qcdcouple.f'
@@ -15,7 +16,7 @@ c--- This is taken from hep-ph/0109078 Eq.(2.11); note however that the log
 c--- proportional to the beta-function coefficient is added in Eq. (2.11)
 c--- and subtracted again in Eq. (4.5), therefore we omit it here.
       I1ggtogamgam=
-     & -xn*((epinv**2+epinv*xlog+0.5d0*xlog**2)
+     & -xn*((epinv2+epinv*xlog+0.5d0*xlog**2)
      & +(11d0/6d0-dfloat(nflav)/(3d0*xn))*epinv)
 
       temp=0d0

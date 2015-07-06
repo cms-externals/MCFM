@@ -12,8 +12,8 @@
       include 'sprods_com.f'
       include 'scheme.f'
       include 'scale.f'
-      include 'epinv2.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'nflav.f'
       double precision p(mxpart,4),msqv(-nf:nf,-nf:nf)
       double precision msq0(-nf:nf,-nf:nf),subuv

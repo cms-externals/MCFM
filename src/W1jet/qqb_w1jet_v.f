@@ -13,6 +13,7 @@ c---
       include 'sprods_com.f'
       include 'zprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scheme.f'
       include 'nflav.f'
       integer j,k,iqqbg(5),iqbqg(5),iqgq(5),igqq(5),

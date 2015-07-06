@@ -8,6 +8,7 @@ C---- arXiv:1101.5947 [hep-ph], Eq. (92)
       include 'sprods_com.f'
       include 'zabprods_decl.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       double precision mt2,xlog,beta
       double complex BSYA0qedpppm,BSYALslggpppm,Vslc,lnrat

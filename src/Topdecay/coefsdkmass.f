@@ -49,7 +49,7 @@ C------       eta=1 t'Hooft Veltman
       if ((mb .eq. 0d0) .and. (mt .eq. 0d0)) then 
            s12log=lnrat(musq,-s12)
 C----Again these are corrections to vertex in units of as/4/pi*CF
-           C0L=-2d0*(epinv**2+epinv*s12log+0.5d0*s12log**2)
+           C0L=-2d0*(epinv2+epinv*s12log+0.5d0*s12log**2)
      &     -3d0*(epinv+s12log)-7d0-eta
            C0R=czip
            C1L=czip
@@ -137,7 +137,7 @@ c--- massive result: formula from paper [in units of 2*gsq*Cg*CF -> ason2pi*Cf]
       endif
 
       C0L=Zt+Zb+epinv+mulog+2d0-eta
-     & +2d0*(1d0+rbsq-rwsq)*mt**2*(C0(-2)*epinv**2+C0(-1)*epinv+C0(0))
+     & +2d0*(1d0+rbsq-rwsq)*mt**2*(C0(-2)*epinv2+C0(-1)*epinv+C0(0))
      & +(2d0*rwsq*(1d0+rbsq-rwsq/2d0)-(1d0-rbsq)**2
      & +2d0*B0f1*(1d0-rbsq-rwsq*(2d0+rbsq-rwsq))
      & -B0f2*((1d0-rbsq)**2-4d0*rwsq*(1d0+rbsq-0.75d0*rwsq)))/lambda

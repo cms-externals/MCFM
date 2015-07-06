@@ -10,6 +10,7 @@ C    with a factor of gsq*ason2pi*Asq removed.
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scheme.f'
       double complex L0,L1,Lsm1,Lsm1_2me,lnrat
       double precision s123,s124,s134,s234,s12,s13,s14,s23,s24,s34
@@ -122,7 +123,7 @@ C-----End of statement functions
       Hqarb=Hqarbsq(i1,i2,i3,i4)
 
 
-      Hqarbvsq=epinv**2*(2.D0/xn-2.D0*xn)
+      Hqarbvsq=epinv2*(2.D0/xn-2.D0*xn)
 
       Hqarbvsq=Hqarbvsq+epinv * (
      &     + 3.D0/xn-3.D0*xn

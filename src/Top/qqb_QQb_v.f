@@ -62,6 +62,7 @@
       include 'nflav.f'
       include 'qcdcouple.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scheme.f'
       include 'scale.f'
       include 'breit.f'
@@ -163,7 +164,7 @@ c--- Note that the overall factor in this definition of the virtual
 c--- functions also differs from ours in that we have 1/Gamma(1-ep).
 c--- This gives an extra (-pisqo6) compared to Gamma(1-ep)/Gamma(1-2*ep)
       epin=epinv+rmuom2
-      epin2=epinv**2+epinv*rmuom2+half*rmuom2**2-pisqo6
+      epin2=epinv2+epinv*rmuom2+half*rmuom2**2-pisqo6
 
       qqss=
      .  gsq/V*qqQQv_0*( 

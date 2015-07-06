@@ -94,6 +94,7 @@ c  * ( 2*L + 4*[ln(1-x)] - 2*epinv )
       double precision x,L,omx,lx,lomx
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- initial-initial gluon-quark antenna, either
@@ -128,6 +129,7 @@ c  - [x^2+(1-x)^2]*epinv
       double precision x,L,omx,lx,lomx
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- initial-initial quark-quark (--> gluon) antenna, either
@@ -352,6 +354,7 @@ c  * ( 2*L + 4*[ln(1-x)] - 2*epinv )
       double precision x,L,omx,lx,lomx
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- initial-final gluon-quark antenna, either
@@ -385,6 +388,7 @@ c  - [x^2+(1-x)^2]*epinv
       double precision x,L,omx,lx,lomx
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- initial-final gluon-gluon antenna, either
@@ -548,7 +552,6 @@ c      integer vorz
 c      double precision x,L,omx
 c      include 'constants.f'
 c      include 'epinv.f'
-c      include 'epinv2.f'
 c      include 'scheme.f'
 c--- returns the integral of the subtraction term for an
 c--- final-initial gluon-quark antenna, either
@@ -624,7 +627,6 @@ c      integer vorz
 c      double precision x,L
 c      include 'constants.f'
 c      include 'epinv.f'
-c      include 'epinv2.f'
 c      include 'scheme.f'
 c--- returns the integral of the subtraction term for an
 c--- final-initial gluon-quark antenna, either

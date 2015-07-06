@@ -4,6 +4,7 @@
       include 'zprods_decl.f'
       include 'sprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       double precision s12,s34
       double complex lnrat,A0phiqarbmppm

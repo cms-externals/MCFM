@@ -84,6 +84,7 @@ c--  +4*[ln(1-x)/(1-xp)]+2*L/[1-xp]
       double precision x,L,omx,lx,lomx,Pqgreg,alfax
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- initial-initial gluon-quark antenna, either
@@ -113,6 +114,7 @@ c-- Id,aqg=(1-2*x*(1-x))*(-[ln(x)]+L+2*[ln(1-x)])+2*x*(1-x)
       double precision x,L,omx,lx,lomx,Pgqreg,alfax
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'alfacut.f'
 c--- returns the integral of the subtraction term for an
 c--- initial-initial quark-quark (--> gluon) antenna, either
@@ -449,7 +451,6 @@ c      integer vorz
 c      double precision x,L,omx
 c      include 'constants.f'
 c      include 'epinv.f'
-c      include 'epinv2.f'
 c      include 'scheme.f'
 c--- returns the integral of the subtraction term for an
 c--- final-initial gluon-quark antenna, either
@@ -519,7 +520,6 @@ c      integer vorz
 c      double precision x,L
 c      include 'constants.f'
 c      include 'epinv.f'
-c      include 'epinv2.f'
 c      include 'scheme.f'
 c--- returns the integral of the subtraction term for an
 c--- final-initial gluon-quark antenna, either

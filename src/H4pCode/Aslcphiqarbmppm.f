@@ -4,6 +4,7 @@
       include 'zprods_decl.f'
       include 'sprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       include 'deltar.f'
       double precision s12,s13,s41,s23,s24,s34
@@ -24,7 +25,7 @@
 
 C---arXIv:09060008v1 Eq.(4.11)
       Vslc=
-     & -epinv**2*2d0
+     & -epinv2*2d0
      & -epinv*lnrat(musq,-s12)-epinv*lnrat(musq,-s34)
      & -0.5d0*lnrat(musq,-s12)**2-0.5d0*lnrat(musq,-s34)**2
      & -3d0/2d0*(2d0*epinv+lnrat(musq,-s12)+lnrat(musq,-s34))

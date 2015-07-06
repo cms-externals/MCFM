@@ -7,6 +7,7 @@ C     for the process H --> q(p1)+a(p2)+q(p3)+a(p4)
       include 'sprods_com.f'
       include 'scale.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scheme.f'
       double complex L0,L1,Lsm1,Lsm1_2me,lnrat
       double precision s123,s124,s134,s234,s12,s13,s14,s23,s24,s34
@@ -133,7 +134,7 @@ C-----End of statement functions
       Hqaqa=Hqaqasq(i1,i2,i3,i4)
 
 
-      Hqaqavsq = + epinv**2*(+2.D0/xn-2.D0*xn)
+      Hqaqavsq = + epinv2*(+2.D0/xn-2.D0*xn)
       Hqaqavsq = Hqaqavsq + epinv * (
      &     + 3.D0/xn- 3.D0*xn
      &     - 8.D0/3.D0*0.5d0*nf

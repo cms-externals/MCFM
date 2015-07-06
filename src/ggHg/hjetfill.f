@@ -2,6 +2,7 @@
       implicit none
       include 'constants.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       include 'b0.f'
       double precision virtgg,virtqa,virtaq,virtqg,virtgq,
@@ -35,7 +36,7 @@ c--- Factor of ason2pi included in gg_hg_v.f
 C--- Three powers of as in Born --> 3      
       subuv=3d0*subuv+Delta
   
-      virtgg=-3d0*epinv**2*xn*logg 
+      virtgg=-3d0*epinv2*xn*logg 
      . +epinv*xn*logg*(lns+lnt+lnu-3d0*lnm )
      . +xn*logg
      . *(2d0*(Li2t+Li2u+Li2s)
@@ -45,7 +46,7 @@ C--- Three powers of as in Born --> 3
      . +V*xn*(xn-xlf)/3d0*mhsq*(1d0+mhsq/s+mhsq/t+mhsq/u)
      . +subuv*logg
  
-      virtqa=+(-2d0*xn+1d0/xn)*loqa*epinv**2
+      virtqa=+(-2d0*xn+1d0/xn)*loqa*epinv2
      . -2d0/3d0*xlf*epinv*loqa
      . +epinv*xn*loqa*(13d0/6d0-2d0*lnm+lnt+lnu)
      . +epinv/xn*loqa*(1.5d0-lns+lnm)
@@ -60,7 +61,7 @@ C--- Three powers of as in Born --> 3
      . -0.25d0*(xn**3-1d0/xn)*(t+u)
      . +subuv*loqa
 
-      virtaq=(-2d0*xn+1d0/xn)*loaq*epinv**2
+      virtaq=(-2d0*xn+1d0/xn)*loaq*epinv2
      . -2d0/3d0*xlf*epinv*loaq
      . +epinv*xn*loaq*(13d0/6d0-2d0*lnm+lnu+lnt)
      . +epinv/xn*loaq*(1.5d0-lns+lnm)
@@ -76,7 +77,7 @@ C--- Three powers of as in Born --> 3
      . +subuv*loaq
  
 
-      virtgq=(-2d0*xn+1d0/xn)*epinv**2*logq
+      virtgq=(-2d0*xn+1d0/xn)*epinv2*logq
      . -2d0/3d0*xlf*epinv*logq
      . +epinv*xn*logq*(13d0/6d0+lns-2d0*lnm+lnt)
      . +epinv/xn*logq*(3d0/2d0+lnm-lnu)
@@ -91,7 +92,7 @@ C--- Three powers of as in Born --> 3
      . +0.25d0*(xn**3-1d0/xn)*(t+s)
      . +subuv*logq
 
-      virtqg=(-2d0*xn+1d0/xn)*epinv**2*loqg
+      virtqg=(-2d0*xn+1d0/xn)*epinv2*loqg
      . -2d0/3d0*xlf*epinv*loqg
      . +epinv*xn*loqg*(13d0/6d0+lns-2d0*lnm+lnu)
      . +epinv/xn*loqg*(3d0/2d0+lnm-lnt)

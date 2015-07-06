@@ -8,6 +8,7 @@ C---- taken from arXiv:1101.5947 [hep-ph], Eq. (102)
       include 'zabprods_decl.f'
       include 'sprods_com.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'massiveintegrals.f'
       double complex BSYA0qqppmp
       integer e1,p2,p3,e4

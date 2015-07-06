@@ -4,6 +4,7 @@
       include 'sprods_com.f'
       include 'zprods_decl.f'
       include 'epinv.f'
+      include 'epinv2.f'
       include 'scale.f'
       double complex Vf,Vs,Ff,Fs,L0,L2,miA5tree,lnrat
       integer j1,j2,j3,j4,j5
