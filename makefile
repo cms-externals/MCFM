@@ -28,10 +28,10 @@ PDFROUTINES = NATIVE
 NTUPLES = NO
 
 FC = gfortran
-FFLAGS 	= -fno-automatic -fPIC -DPIC -O0 -g -I$(INCPATH) -Iobj
+FFLAGS 	= -fno-automatic -fPIC -DPIC -O0 -I$(INCPATH) -Iobj
 
 F90 = gfortran
-F90FLAGS = -fno-automatic -fno-f2c -O2 -g -I$(INCPATH) -Iobj -Jobj
+F90FLAGS = -fno-automatic -fno-f2c -O2 -I$(INCPATH) -Iobj -Jobj
 
 
 # If using FROOT package for ROOT ntuples, first specify C++ compiler:
